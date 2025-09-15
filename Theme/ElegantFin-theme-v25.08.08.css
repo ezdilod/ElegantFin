@@ -33,7 +33,8 @@
     --osdSeekBarThumbColor: white;
     --tableBodyColor: rgb(31 41 55 / 1);
     --uiAccentColor: rgb(117 111 226);
-    --btnMiniPlayColor: rgb(41 154 93);
+/*     --btnMiniPlayColor: rgb(41 154 93); */
+    --btnMiniPlayColor: rgba(180, 180, 180, 0.3)
     --btnMiniPlayBorderColor: rgb(50, 167, 105);
 
     /* Base component colors */
