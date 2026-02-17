@@ -1,4 +1,4 @@
-/* Add-on: Media Bar plugin support nightly for the ElegantFin Theme for Jellyfin by lscambo13 */
+/* Add-on: Media Bar plugin support v25.11.25 for the ElegantFin Theme for Jellyfin by lscambo13 */
 /* this styles the media bar plugin - start */
 .play-button::before,
 .detail-button::before,
@@ -32,20 +32,16 @@
 
 .age-rating {
     font-size: 0.8em;
-    font-family: "Archivo Narrow", sans-serif;
-    color: unset;
 }
 
 #slides-container {
     width: calc(100vw - (2 * var(--sidePadding)));
     height: 62%;
-    top: calc(var(--appBarHeight) * 2 + 1.25em);
+    top: var(--appBarHeight);
     border: var(--defaultBorder);
     border-radius: var(--largerRadius);
     transition: all 0.125s, border 0s;
     user-select: none;
-    position: absolute;
-    left: var(--sidePadding);
 }
 
 .logo-container {
@@ -63,74 +59,28 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), 40%, transparent);
 }
 
-.pause-button {
-    top: 1em !important;
-}
-
-.separator-icon {
-    font-size: 5px;
-    color: var(--dimTextColor);
-}
-
-.dot {
-    border-radius: 0.25em;
-    width: 0.375em;
-    height: 0.375em;
-    transition: width 0.5s;
-    opacity: 0.5;
-    background-color: var(--textColor) !important;
-}
-
-.dot.active {
-    width: 2em;
-    transform: none;
-}
-
 @media only screen and (max-width: 767px) and (orientation: portrait) {
     .button-container {
-        bottom: 3em;
+        top: calc(50% + 20vh);
+        transform: translateX(-50%) scale(0.8);
     }
 
-    .tomato-rating,
-    .genre {
+    .tomato-rating {
         display: none;
     }
 
     .dots-container {
-        bottom: 6em;
-    }
-
-    .info-container {
-        bottom: 5em;
-    }
-
-    .logo-container {
-        top: calc(100% - 15em);
+        top: calc(50% + 19vh);
     }
 
     .backdrop {
         transform-origin: center;
     }
-
-    .left-arrow,
-    .right-arrow {
-        display: none !important;
-    }
 }
 
 @media (min-width: 75em) {
     #slides-container {
-        top: calc(var(--appBarHeight) + 1.25em);
-    }
-
-    .layout-tv #slides-container {
-        top: calc(var(--appBarHeight) * 2 + 1.25em);
-    }
-}
-
-@media (min-width: 100em) {
-    .layout-tv #slides-container {
-        top: calc(var(--appBarHeight) + 1.25em);
+        top: calc(0.5 * var(--appBarHeight));
     }
 }
 
@@ -141,6 +91,12 @@
 
     .logo-container {
         top: 3%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    .logo-container {
+        top: 50%;
     }
 }
 
